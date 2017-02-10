@@ -5,6 +5,18 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+group :development, :test do
+  gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
+
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara' , '2.1.0'
+
+end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
